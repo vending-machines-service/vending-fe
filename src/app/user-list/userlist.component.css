@@ -1,0 +1,36 @@
+.userlist{
+  margin: 10px;
+ }
+.btn-group{
+display: flex;
+  align-items: right;
+justify-content: right;
+}
+.add-button {
+  padding-left: 0;
+  padding-right: 0;
+  position: fixed;
+  left: 250px;
+  bottom: 10%;
+
+}
+.card-container{
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 5px;
+  }
+.paginator{
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 80%;
+}
+.selected-item {
+  flex: 1;
+  }
+
+.btn-group button{
+  margin-right: 5px;
+}

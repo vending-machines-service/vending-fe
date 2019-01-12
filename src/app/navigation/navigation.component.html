@@ -1,0 +1,85 @@
+<mat-toolbar color="primary">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="drawer.toggle()"
+    *ngIf="isHandset$ | async">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span>Vending machine service</span>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let menu of menuItems" [routerLink]="menu.redirectUrl">{{menu.name}}</a>
+
+
+      <a mat-list-item>
+      <div [matMenuTriggerFor]="service" class="service-btn">Service</div>
+        <mat-menu #service="matMenu">
+          <button mat-menu-item [matMenuTriggerFor]="currentRecords">Current records</button>
+          <button mat-menu-item [matMenuTriggerFor]="archiveRecords">Archive records</button>
+          <button mat-menu-item (click)= "onCompleteRec()">Complete records</button>
+
+
+        </mat-menu>
+        <mat-menu #currentRecords="matMenu">
+          <button mat-menu-item (click)="onAllCurRec()">All current records</button>
+          <button mat-menu-item (click)="onCurMtRec()">Current maintenance records</button>
+          <button mat-menu-item (click)="onCurMfRec()">Current malfunction records</button>
+
+        </mat-menu>
+        <mat-menu #archiveRecords="matMenu">
+          <button mat-menu-item (click)="onAllArcRec()">All archive records</button>
+          <button mat-menu-item (click)="onArcMtRec()">Archive maintenance records</button>
+          <button mat-menu-item (click)="onArcMfRec()">Archive malfunction records</button>
+
+        </mat-menu>
+
+      </a>
+
+      <a mat-list-item >
+      <div [matMenuTriggerFor]="stats" class="stat_btn">Statistics</div>
+
+      <mat-menu #stats="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="machinesStats">Machines statistics</button>
+        <button mat-menu-item [matMenuTriggerFor]="productsStats">Products statistics</button>
+        <button mat-menu-item [matMenuTriggerFor]="serviceStats">Service statistics</button>
+      </mat-menu>
+
+      <mat-menu #machinesStats="matMenu">
+        <button mat-menu-item (click)="onMachAvgProf()">Machine profit</button>
+        <button mat-menu-item (click)="onIncByPer()">Income by period</button>
+        <button mat-menu-item (click)="onMonMachProfByPer()">Monthly machine profit by period</button>
+
+      </mat-menu>
+
+      <mat-menu #productsStats="matMenu">
+        <button mat-menu-item (click)="onProdIncByPer()">Product income by period</button>
+        <button mat-menu-item (click)="onProfitlessProdByPer()">Profitless products by period</button>
+        <button mat-menu-item (click)="onMostProfProdByPer()">Most profited product by period</button>
+        <button mat-menu-item (click)="onSoldProdByPer()">Sold product by period</button>
+        <button mat-menu-item (click)="onAllSoldProdByPer()">All sold products by period</button>
+      </mat-menu>
+
+        <mat-menu #serviceStats="matMenu">
+          <button mat-menu-item (click)="onServFreq()">Service frequency</button>
+          <button mat-menu-item>Broken machine timeline</button>
+
+        </mat-menu>
+      </a>
+      <div class="btn-group">
+      <button mat-raised-button color="accent">Start</button><br>
+      <button mat-raised-button color="warn">Stop</button>
+      </div>
+      </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

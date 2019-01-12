@@ -1,0 +1,21 @@
+<div mat-dialog-content class="input-form">
+  <p class="title">Add new product</p>
+  <mat-form-field>
+    <input matInput placeholder="Enter product id" [(ngModel)] = "productId">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Enter product name" [(ngModel)] = "productName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Enter product price" [(ngModel)] = "productPrice">
+  </mat-form-field>
+  <mat-radio-group [(ngModel)]="selectedVal">
+    <label>Available?</label>
+    <mat-radio-button [value] = "available">Yes</mat-radio-button>
+    <mat-radio-button [value] ="notAvailable">No</mat-radio-button>
+  </mat-radio-group>
+  </div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onSaveClick()"  cdkFocusInitial>Save</button>
+</div>

@@ -1,0 +1,23 @@
+<div mat-dialog-content class="input-form">
+  <p class="title">Machine profit</p>
+
+  <mat-form-field>
+    <mat-select required placeholder="Choose machine id" [(ngModel)] = "machineId">
+      <mat-option *ngFor="let machine of machines" [value]="machine.machineId" >{{machine.machineId}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select required placeholder="Choose user id" [(ngModel)] = "userId">
+      <mat-option *ngFor="let user of users" [value]="user.userId">{{user.userId}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Comment" [(ngModel)]="comment"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onOkClick()"  cdkFocusInitial>Ok</button>
+</div>

@@ -1,0 +1,46 @@
+
+<div mat-dialog-content class="input-form">
+  <p class="title"> Edit machine</p>
+  <mat-form-field>
+    <input matInput placeholder="Enter id"  [(ngModel)] = "machineId">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Enter firmName" [(ngModel)] = "firmName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Enter location" [(ngModel)] = "location">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select required placeholder="Choose product for slot 1" [(ngModel)] = "sensorId1.productId">
+      <mat-option *ngFor="let product of products" [value]="product.productId">{{product.name}}</mat-option>
+
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select required placeholder="Choose product for slot 2" [(ngModel)] = "sensorId2.productId">
+      <mat-option *ngFor="let product of products" [value]="product.productId">{{product.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select required placeholder="Choose product for slot 3" [(ngModel)] = "sensorId3.productId">
+      <mat-option *ngFor="let product of products" [value]="product.productId">{{product.name}}</mat-option>
+
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select required placeholder="Choose product for slot 4" [(ngModel)] = "sensorId4.productId">
+      <mat-option *ngFor="let product of products" [value]="product.productId">{{product.name}}</mat-option>
+
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select required placeholder="Choose product for slot 5" [(ngModel)] = "sensorId5.productId">
+      <mat-option *ngFor="let product of products" [value]="product.productId">{{product.name}}</mat-option>
+
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onSaveClick()"  cdkFocusInitial>Save</button>
+</div>

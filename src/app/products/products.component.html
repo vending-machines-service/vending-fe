@@ -1,0 +1,17 @@
+<div class="productslist">
+  <mat-card class="card-container" *ngFor="let product of products">
+    <div class="selected-item" (click)="onSelect(product.productId, product.name, product.price,
+    product.avaliable)">
+      ID: {{product.productId}}<br> Name: {{product.name}}
+    </div>
+    <div class="btn-group" role="group">
+      <button mat-mini-fab button color="accent"(click)="onEdit(product)"><img src="../../assets/edit_button.png"/></button>
+      <button mat-mini-fab button color="warn" (click)="onDelete(product.productId)"><img src="../../assets/delete_button.png"/></button>
+    </div>
+
+  </mat-card>
+
+<div>
+  <button mat-fab color="primary" class="add-button" (click)="onAddProduct()"><img src="../../assets/add_button.png"/></button>
+</div>
+

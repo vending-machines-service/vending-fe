@@ -1,0 +1,8 @@
+
+<div>Machine Id: {{machineState.machineId}}</div>
+
+<div *ngFor="let box of productsBoxes">  {{box}}: {{ machineState.productsBoxes[box]}} </div>
+
+<div *ngFor="let sensor of sensorsData"> {{sensor}}: {{machineState.sensorsData[sensor]}} </div>
+
+<div>Machine State: {{machineState.state}}</div>

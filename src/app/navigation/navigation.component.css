@@ -1,0 +1,36 @@
+.sidenav-container {
+  height: 100%;
+  font-weight: 500;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.stat_btn{
+  font-size: 16px;
+  font-style: normal;
+}
+.role-select {
+  display: flex;
+  align-content: left;
+}
+.service-btn {
+  font-size: 16px;
+  font-style: normal;
+}
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Machine1"
+  },
+  {
+    "id": 2,
+    "name": "Machine2"
+  },
+  {
+    "id": 3,
+    "name": "Machine3"
+  },
+  {
+    "id": 4,
+    "name": "Machine4"
+  },
+  {
+    "id": 5,
+    "name": "Machine5"
+  }
+]

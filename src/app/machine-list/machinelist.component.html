@@ -1,0 +1,14 @@
+<div class="machinelist">
+  <mat-card class="card-container" *ngFor="let machine of machines" >
+    <div class="selected-item" (click)="onSelect(machine.machineId, machine.firmName, machine.location)">
+      {{machine.machineId}}
+    </div>
+    <div class="btn-group" role="group">
+      <button mat-mini-fab button color="accent" (click)="onEdit(machine.machineId)"><img src="../../assets/edit_button.png"/></button>
+      <button mat-mini-fab button color="warn" (click)="onDelete(machine.machineId)"><img src="../../assets/delete_button.png"/></button>
+    </div>
+  </mat-card>
+
+<div>
+  <button mat-fab color="primary" class="add-button" (click)="onAddMachine()"><img src="../../assets/add_button.png"/></button>
+</div>

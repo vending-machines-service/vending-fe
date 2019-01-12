@@ -1,0 +1,8 @@
+.input-form{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  text-align: center;
+}

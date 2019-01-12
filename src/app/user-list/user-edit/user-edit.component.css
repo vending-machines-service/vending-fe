@@ -1,0 +1,9 @@
+.input-form{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.role-select {
+  display: flex;
+  flex-direction: column;
+}

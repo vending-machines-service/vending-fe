@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "User1",
+    "model": "Venda",
+    "slot1": "Cola",
+    "slot2": "Sprite",
+    "slot3": "Fanta",
+    "slot4": "Snickers",
+    "slot5": "Mars"
+  },
+  {
+    "id": 2,
+    "name": "User2",
+    "model": "Venda",
+    "slot1": "Cola",
+    "slot2": "Sprite",
+    "slot3": "Fanta",
+    "slot4": "Snickers",
+    "slot5": "Mars"
+  },
+  {
+    "id": 3,
+    "name": "User3",
+    "model": "Venda",
+    "slot1": "Cola",
+    "slot2": "Sprite",
+    "slot3": "Fanta",
+    "slot4": "Snickers",
+    "slot5": "Mars"
+  },
+  {
+    "id": 4,
+    "name": "User4",
+    "model": "Venda",
+    "slot1": "Cola",
+    "slot2": "Sprite",
+    "slot3": "Fanta",
+    "slot4": "Snickers",
+    "slot5": "Mars"
+  }
+]

@@ -1,0 +1,14 @@
+<div class="userlist">
+  <mat-card class="card-container" *ngFor="let user of users" >
+    <div class="selected-item" (click)="onSelect(user.userId, user.userName, user.roles)">
+      ID: {{user.userId}}<br>Name: {{user.userName}}
+    </div>
+    <div class="btn-group">
+      <button mat-mini-fab button color="accent"(click)="onEdit(user)"><img src="../../assets/edit_button.png"/></button>
+      <button mat-mini-fab button color="warn" (click)="onDelete(user.userId)"><img src="../../assets/delete_button.png"/></button>
+    </div>
+  </mat-card>
+
+<div>
+  <button mat-fab color="primary" class="add-button" (click)="onAddUser()"><img src="../../assets/add_button.png"/></button>
+</div>

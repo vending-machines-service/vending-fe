@@ -1,0 +1,24 @@
+<div mat-dialog-content class="input-form">
+  <p class="title">Add new user</p>
+  <mat-form-field>
+    <input matInput placeholder="Enter user Id" [(ngModel)]="userId">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Enter user Name" [(ngModel)]="userName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Enter password" [(ngModel)]="password">
+  </mat-form-field>
+  <section class="role-select">
+    <label>Choose roles for user</label>
+    <mat-checkbox class="example-margin" [(ngModel)]="roles[0].checked">Administration</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="roles[1].checked">Management</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="roles[2].checked">Statistics</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="roles[3].checked">Service</mat-checkbox>
+  </section>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onSaveClick()"  cdkFocusInitial>Save</button>
+</div>
